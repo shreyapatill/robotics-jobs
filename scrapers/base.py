@@ -59,12 +59,17 @@ class Job:
             "senior", "sr.", "sr ", "principal", "staff", "lead",
             "director", "head of", "vp ", "vice president",
             "manager", "architect", "distinguished", "fellow",
+            # Management positions
+            "management", "supervisor", "coordinator", "program manager",
+            "project manager", "product manager", "engineering manager",
             # Level indicators (typically 3+ years)
             "ii", "iii", "iv", "v",  # Roman numerals (II = ~2-3 yrs, III+ = senior)
             "level 2", "level 3", "level 4", "level 5",
             "l2", "l3", "l4", "l5", "l6", "l7",
             "2+", "3+", "4+", "5+",  # Years experience
             "mid-level", "mid level", "experienced",
+            # Transcript requirements (usually in job description, but sometimes in title)
+            "transcript",
         ]
         
         # Allow "team lead" type roles that might be ok
@@ -166,6 +171,44 @@ class BaseScraper(ABC):
             return False
         except requests.RequestException:
             return False
+
+    def check_description_requirements(self, url: str) -> tuple[bool, str]:
+        """
+        Fetch job description and check for disqualifying requirements.
+        
+        Args:
+            url: The job posting URL
+            
+        Returns:
+            Tuple of (passes_filter, reason)
+            - passes_filter: True if job should be included
+            - reason: Why it was filtered out (empty if passes)
+        """
+        disqualifying_patterns = [
+            # Transcript requirements only
+            ("transcript", "requires transcript"),
+            ("official transcript", "requires transcript"),
+            ("academic record", "requires transcript"),
+            ("submit your transcript", "requires transcript"),
+            ("provide transcript", "requires transcript"),
+            ("upload transcript", "requires transcript"),
+        ]
+        
+        try:
+            response = self.get(url)
+            if response.status_code != 200:
+                return True, ""  # Can't check, assume it passes
+                
+            content = response.text.lower()
+            
+            for pattern, reason in disqualifying_patterns:
+                if pattern in content:
+                    return False, reason
+                    
+            return True, ""
+            
+        except requests.RequestException:
+            return True, ""  # Can't check, assume it passes
 
     @abstractmethod
     def scrape(self, source: str | dict, keywords: list[str]) -> list[Job]:

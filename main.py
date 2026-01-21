@@ -6,6 +6,7 @@ Usage:
     python main.py                    # Run all scrapers
     python main.py --dry-run          # Show what would be scraped without saving
     python main.py --check-status     # Also verify existing job links
+    python main.py --deep-filter      # Check job descriptions for transcript/GPA requirements
     python main.py --config path.yaml # Use custom config file
 """
 
@@ -27,6 +28,7 @@ from scrapers import (
     LinkedInScraper,
     WorkdayScraper,
     CustomScraper,
+    BaseScraper,
     Job,
 )
 from utils import READMEGenerator
@@ -107,6 +109,29 @@ def run_scrapers(config: dict) -> list[Job]:
     return all_jobs
 
 
+def filter_jobs_by_description(jobs: list[Job], console: Console) -> list[Job]:
+    """Filter jobs by checking their descriptions for disqualifying requirements."""
+    filtered_jobs = []
+    scraper = BaseScraper.__subclasses__()[0]()  # Use any scraper for the check
+    
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        console=console,
+    ) as progress:
+        task = progress.add_task("[cyan]Checking job descriptions...", total=len(jobs))
+        
+        for job in jobs:
+            passes, reason = scraper.check_description_requirements(job.url)
+            if passes:
+                filtered_jobs.append(job)
+            else:
+                print(f"[Deep filter] Excluded: {job.title} at {job.company} - {reason}")
+            progress.advance(task)
+    
+    return filtered_jobs
+
+
 def display_jobs(jobs: list[Job]) -> None:
     """Display jobs in a formatted table."""
     table = Table(title=f"Found {len(jobs)} Jobs")
@@ -147,6 +172,11 @@ def main():
         action="store_true",
         help="Check and update status of existing job links",
     )
+    parser.add_argument(
+        "--deep-filter",
+        action="store_true",
+        help="Check job descriptions for transcript/GPA/clearance requirements (slower)",
+    )
     args = parser.parse_args()
 
     console.print("[bold blue]🤖 Robotics Jobs Scraper[/bold blue]\n")
@@ -165,6 +195,13 @@ def main():
     # Display results
     console.print()
     display_jobs(jobs)
+
+    # Deep filter if requested
+    if args.deep_filter:
+        console.print("\n[bold]Running deep filter on job descriptions...[/bold]\n")
+        original_count = len(jobs)
+        jobs = filter_jobs_by_description(jobs, console)
+        console.print(f"\n[yellow]Deep filter removed {original_count - len(jobs)} jobs[/yellow]")
 
     if args.dry_run:
         console.print("\n[yellow]Dry run - README not updated[/yellow]")
