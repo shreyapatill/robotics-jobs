@@ -92,7 +92,7 @@ class LinkedInScraper(BaseScraper):
                         )
 
                         # Filter by config keywords if any additionally specified
-                        if not keywords or job.matches_keywords(keywords):
+                        if (not keywords or job.matches_keywords(keywords)) and job.is_entry_or_mid_level():
                             jobs.append(job)
 
                     except Exception as e:

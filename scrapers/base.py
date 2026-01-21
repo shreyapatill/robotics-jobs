@@ -30,12 +30,30 @@ class Job:
         status = "✅" if self.is_active else "🔒"
         date_str = self.date_added.strftime("%m/%d/%Y")
         role_link = f"{status} [{self.title}]({self.url})"
-        return f"| [{self.company}]({self.company_url}) | {self.location} | {role_link} | {self.visa_info} | {date_str} |\n"
+        return f"| [{self.company}]({self.company_url}) | {self.location} | {role_link} | {date_str} |\n"
 
     def matches_keywords(self, keywords: list[str]) -> bool:
         """Check if job title matches any keywords (case-insensitive)."""
         title_lower = self.title.lower()
         return any(kw.lower() in title_lower for kw in keywords)
+
+    def is_entry_or_mid_level(self) -> bool:
+        """
+        Check if job is entry/mid level (not requiring 8+ years).
+        Returns False for senior/principal/staff/director level roles.
+        """
+        title_lower = self.title.lower()
+        senior_patterns = [
+            "senior", "sr.", "sr ", "principal", "staff", "lead",
+            "director", "head of", "vp ", "vice president",
+            "manager", "architect", "distinguished", "fellow",
+            "iii", "iv", "v", "level 3", "level 4", "level 5",
+            "l3", "l4", "l5", "l6", "l7",
+        ]
+        # Allow "team lead" type roles that might be ok
+        if "team lead" in title_lower:
+            return True
+        return not any(pattern in title_lower for pattern in senior_patterns)
 
 
 class BaseScraper(ABC):

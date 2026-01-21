@@ -18,49 +18,21 @@ A curated list of robotics and autonomy job openings, automatically updated dail
 
 ## 💼 Jobs
 
-| Company | Location | Role | Visa/Citizenship | Date Added |
-| ------- | -------- | ---- | ---------------- | ---------- |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior Manager, Autonomy Hardware Systems EngineeringOn-site — Full-timeFoster City, CA](https://jobs.lever.co/zoox/25b24c3c-1d90-460e-bdc4-b028356c4f95) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior/Staff Technical Program Manager - AI & AutonomyHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/a7ff5c4a-b47f-402e-b7ee-b0287fd0273c) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Boston, MA | ✅ [Senior Software Engineer - Motion Planning Collision AvoidanceHybrid — Full-timeBoston, MA](https://jobs.lever.co/zoox/2cb20f08-8f89-47c7-88b6-3068056b4363) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior Embedded Software Engineer - Fail OperationsOn-site — Full-timeFoster City, CA](https://jobs.lever.co/zoox/05b5ea39-e611-4b37-884f-fb4e037ce1a9) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Software Development Engineer in Test - Embedded SystemsHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/4b00bf61-6547-4c50-be83-5d659176090b) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior Machine Learning Engineer - Motion Planning & Model IntrospectionHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/a1129f71-95b3-4f84-a77b-f649e531152a) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Boston, MA | ✅ [Senior/Staff Software Engineer - Motion PlanningHybrid — Boston, MA](https://jobs.lever.co/zoox/00bede24-f74d-4447-ace1-48638965382e) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Boston, MA | ✅ [Data Scientist - Perception Verification and ValidationHybrid — Full-timeBoston, MA](https://jobs.lever.co/zoox/9ab192af-3480-40a7-9ff3-f81061ac6301) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Director, PerceptionHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/3921a393-27c0-4a62-bb4d-2e88d80e45e0) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Machine Learning Engineer - Perception AttributesHybrid — Full-timeFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/f44d1c41-2d41-457b-94af-85692176347f) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Machine Learning Engineer - Perception Offline Driving IntelligenceHybrid — Full-timeFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/03b2ccc5-85ac-4f55-9633-9215451246b2) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Boston, MA | ✅ [Machine Learning Engineer - Perception Offline Driving IntelligenceHybrid — Boston, MA](https://jobs.lever.co/zoox/809b1301-9654-4673-8f2d-4bc68bcead7f) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior / Staff Software Engineer - Perception 3D TrackingHybrid — Foster City, CA](https://jobs.lever.co/zoox/f1cff856-94af-476f-8b7f-5af1564c60b7) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Senior Machine Learning Engineer - PerceptionHybrid — Full-timeFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/2f65fc0e-16f1-48a9-b34d-5ca5dcf76800) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior Machine Learning Engineer - Perception MappingHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/4df5862c-edd7-4033-acb8-59ebbfbbb941) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior Manager, PerceptionHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/f5d4afbf-7bab-4865-8ab0-2c4e1e4ab8b9) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Boston, MA | ✅ [Senior Staff Machine Learning Engineer - PerceptionHybrid — Full-timeBoston, MA](https://jobs.lever.co/zoox/1ff0f89b-77ec-4e86-927e-7098c377581f) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior/Staff Machine Learning Engineer - Perception Offline Driving IntelligenceHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/cf049a4a-491e-45c3-bed7-1e8a45dac2bc) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Boston, MA | ✅ [Senior/Staff Machine Learning Engineer - Perception Offline Driving IntelligenceHybrid — Boston, MA](https://jobs.lever.co/zoox/3f187c4f-71a2-4738-9489-19961485c502) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Software Engineer - Perception & SensingHybrid — Full-timeFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/36377a76-8c8d-495c-abe4-82ebae3d6581) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Software Engineer - Perception 3D TrackingHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/8cf5d985-05ba-4b11-accd-66c35ed25173) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Principal Software Engineer - Autonomy BehaviorsHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/b30b28b0-fea9-4420-a61e-10309c3f7c52) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior/Staff Software Engineer - Simulation Motion PlanningHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/ec2c83bc-9260-4c30-99fc-291d0903afe9) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Seattle, WA | ✅ [Senior/Staff Software Engineer - Simulation Motion PlanningHybrid — Full-timeSeattle, WA](https://jobs.lever.co/zoox/88dc7121-8961-42f8-bfc0-2c337c02edf4) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Seattle, WA | ✅ [Software Engineer - Simulation Motion PlanningHybrid — Full-timeSeattle, WA](https://jobs.lever.co/zoox/72e486b1-60cd-4636-970b-5598865542e4) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Software Engineer - Simulation Motion PlanningHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/fb7f5ced-8533-4f4f-a034-106de046acc4) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Senior Software Engineer, Robot Data PlatformHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/047e4f2e-fbb2-4f4b-84c1-b67b7e1c0a53) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Autonomy Systems Test EngineerHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/4d6d0c8a-54eb-4045-80d7-a16e49fdba94) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Engineering Manager, Autonomy Systems Verification and ValidationHybrid — Foster City, CA](https://jobs.lever.co/zoox/46336705-25a7-4e33-b008-680ad0117dd8) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Embedded Software Development InternHybrid — Internship/Co-opFoster City, CA](https://jobs.lever.co/zoox/1fcd743b-6bba-4e6e-b926-a164fff73654) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Firmware Engineer InternHybrid — Internship/Co-opFoster City, CA](https://jobs.lever.co/zoox/e2bf2fd0-11f6-4c04-9cb7-b1f098d3348a) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | San Diego, CA / Foster City, CA | ✅ [Firmware & C++ Development InternHybrid — Internship/Co-opSan Diego, CA / Foster City, CA](https://jobs.lever.co/zoox/5b8ec01c-fdc6-4e05-b077-051f28384b6f) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Machine Learning Engineer Intern, Autonomy BehaviorHybrid — Internship/Co-opFoster City, CA](https://jobs.lever.co/zoox/74ef6bb8-ec8a-4c6c-8618-544717f40e2d) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Machine Learning Engineer Intern, PerceptionHybrid — Internship/Co-opFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/9b3ab3ee-b130-49b6-8413-7d8fd9c33ed3) | - | 01/21/2026 |
-| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Motion Planning InternHybrid — Internship/Co-opFoster City, CA](https://jobs.lever.co/zoox/d355532c-5e18-4eaf-9da1-0571c2cbbc96) | - | 01/21/2026 |
-| [Quilt](https://www.linkedin.com/company/quilt) | Redwood City, CA | ✅ [Mechatronics Hardware Engineer](https://www.linkedin.com/jobs/view/mechatronics-hardware-engineer-at-quilt-4363510730) | - | 01/21/2026 |
-| [The JAM l People in Robotics](https://www.linkedin.com/company/the-jam-l-people-in-robotics) | Nevada, United States | ✅ [Robotics Engineer l All Types](https://www.linkedin.com/jobs/view/robotics-engineer-l-all-types-at-the-jam-l-people-in-robotics-4364921587) | - | 01/21/2026 |
-| [EVONA](https://www.linkedin.com/company/evona) | San Francisco Bay Area | ✅ [Robotics Engineer](https://www.linkedin.com/jobs/view/robotics-engineer-at-evona-4346222266) | - | 01/21/2026 |
-| [Zipline](https://www.linkedin.com/company/zipline) | South San Francisco, CA | ✅ [Perception CV/ML SWE - Offboard Autonomy](https://www.linkedin.com/jobs/view/perception-cv-ml-swe-offboard-autonomy-at-zipline-4290974875) | - | 01/21/2026 |
-| [Zipline](https://www.linkedin.com/company/zipline) | South San Francisco, CA | ✅ [Autonomy Perception CV/ML SWE](https://www.linkedin.com/jobs/view/autonomy-perception-cv-ml-swe-at-zipline-4137028749) | - | 01/21/2026 |
-| [Pronto](https://www.linkedin.com/company/pronto) | San Francisco, CA | ✅ [Robotics Planning Engineer](https://www.linkedin.com/jobs/view/robotics-planning-engineer-at-pronto-4363643140) | - | 01/21/2026 |
+| Company | Location | Role | Date Added |
+| ------- | -------- | ---- | ---------- |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Machine Learning Engineer - Perception AttributesHybrid — Full-timeFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/f44d1c41-2d41-457b-94af-85692176347f) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Software Engineer - Perception & SensingHybrid — Full-timeFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/36377a76-8c8d-495c-abe4-82ebae3d6581) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Software Engineer - Perception 3D TrackingHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/8cf5d985-05ba-4b11-accd-66c35ed25173) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Seattle, WA | ✅ [Software Engineer - Simulation Motion PlanningHybrid — Full-timeSeattle, WA](https://jobs.lever.co/zoox/72e486b1-60cd-4636-970b-5598865542e4) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Software Engineer - Simulation Motion PlanningHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/fb7f5ced-8533-4f4f-a034-106de046acc4) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Autonomy Systems Test EngineerHybrid — Full-timeFoster City, CA](https://jobs.lever.co/zoox/4d6d0c8a-54eb-4045-80d7-a16e49fdba94) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Firmware Engineer InternHybrid — Internship/Co-opFoster City, CA](https://jobs.lever.co/zoox/e2bf2fd0-11f6-4c04-9cb7-b1f098d3348a) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA / Boston, MA | ✅ [Machine Learning Engineer Intern, PerceptionHybrid — Internship/Co-opFoster City, CA / Boston, MA](https://jobs.lever.co/zoox/9b3ab3ee-b130-49b6-8413-7d8fd9c33ed3) | 01/21/2026 |
+| [Zoox](https://jobs.lever.co/zoox) | Foster City, CA | ✅ [Motion Planning InternHybrid — Internship/Co-opFoster City, CA](https://jobs.lever.co/zoox/d355532c-5e18-4eaf-9da1-0571c2cbbc96) | 01/21/2026 |
+| [Quilt](https://www.linkedin.com/company/quilt) | Redwood City, CA | ✅ [Mechatronics Hardware Engineer](https://www.linkedin.com/jobs/view/mechatronics-hardware-engineer-at-quilt-4363510730) | 01/21/2026 |
+| [The JAM l People in Robotics](https://www.linkedin.com/company/the-jam-l-people-in-robotics) | Nevada, United States | ✅ [Robotics Engineer l All Types](https://www.linkedin.com/jobs/view/robotics-engineer-l-all-types-at-the-jam-l-people-in-robotics-4364921587) | 01/21/2026 |
+| [EVONA](https://www.linkedin.com/company/evona) | San Francisco Bay Area | ✅ [Robotics Engineer](https://www.linkedin.com/jobs/view/robotics-engineer-at-evona-4346222266) | 01/21/2026 |
+| [Pronto](https://www.linkedin.com/company/pronto) | San Francisco, CA | ✅ [Robotics Planning Engineer](https://www.linkedin.com/jobs/view/robotics-planning-engineer-at-pronto-4363643140) | 01/21/2026 |
 
 [⬆️ Back to Top](#-robotics--autonomy-jobs)
 
@@ -98,4 +70,4 @@ Or manually add jobs by editing this README following the table format.
 
 ---
 
-*Last updated: 2026-01-21 12:53 UTC*
+*Last updated: 2026-01-21 13:00 UTC*

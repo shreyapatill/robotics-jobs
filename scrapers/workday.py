@@ -109,7 +109,7 @@ class WorkdayScraper(BaseScraper):
                     url=job_url,
                 )
 
-                if job.matches_keywords(keywords):
+                if job.matches_keywords(keywords) and job.is_entry_or_mid_level():
                     jobs.append(job)
 
             except Exception as e:

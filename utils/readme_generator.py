@@ -11,8 +11,8 @@ from scrapers.base import Job
 class READMEGenerator:
     """Generate and manage the jobs README file."""
 
-    TABLE_HEADER = """| Company | Location | Role | Visa/Citizenship | Date Added |
-| ------- | -------- | ---- | ---------------- | ---------- |
+    TABLE_HEADER = """| Company | Location | Role | Date Added |
+| ------- | -------- | ---- | ---------- |
 """
 
     README_TEMPLATE = """# 🤖 Robotics & Autonomy Jobs
@@ -216,7 +216,7 @@ Or manually add jobs by editing this README following the table format.
             company_link = f"[{job['company']}]({job['company_url']})" if job.get("company_url") else job["company"]
             role_link = f"{status} [{job['role']}]({job['role_url']})" if job.get("role_url") else f"{status} {job['role']}"
 
-            row = f"| {company_link} | {job['location']} | {role_link} | {job['visa']} | {job['date']} |"
+            row = f"| {company_link} | {job['location']} | {role_link} | {job['date']} |"
             rows.append(row)
 
         return self.TABLE_HEADER + "\n".join(rows)

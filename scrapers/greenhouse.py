@@ -77,8 +77,8 @@ class GreenhouseScraper(BaseScraper):
                     url=job_url,
                 )
 
-                # Filter by keywords
-                if job.matches_keywords(keywords):
+                # Filter by keywords and experience level
+                if job.matches_keywords(keywords) and job.is_entry_or_mid_level():
                     jobs.append(job)
 
             except Exception as e:
