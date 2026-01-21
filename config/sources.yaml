@@ -1,0 +1,84 @@
+# Robotics & Autonomy Jobs - Source Configuration
+# Add companies to monitor for job postings here
+
+# Keywords to filter for robotics/autonomy roles
+keywords:
+  - robotics
+  - robot
+  - autonomous
+  - autonomy
+  - perception
+  - motion planning
+  - path planning
+  - SLAM
+  - localization
+  - computer vision
+  - controls
+  - mechatronics
+  - navigation
+  - manipulation
+  - firmware
+  - embedded
+  - ROS
+  - sensor fusion
+
+# Greenhouse job boards (company slug from boards.greenhouse.io/{slug})
+greenhouse:
+  - nuro
+  - cruise
+  - auroradriver
+  - zipline
+  - anduril
+  - skydio
+  - neuralink
+  - tempus-ex
+  - apptronik
+  - agilityx
+  - formlabs
+  - relataboratories
+
+# Lever job boards (company slug from jobs.lever.co/{slug})
+lever:
+  - zoox
+  - covariant
+  - symbotic
+  - outrider
+  - path-robotics
+
+# Workday job boards ({tenant}.wd{n}.myworkdayjobs.com)
+workday:
+  - tenant: nvidia
+    subdomain: nvidia.wd5.myworkdayjobs.com
+  - tenant: apple
+    subdomain: jobs.apple.com
+  - tenant: qualcomm
+    subdomain: qualcomm.wd5.myworkdayjobs.com
+
+# LinkedIn job search (keywords and filters)
+linkedin:
+  keywords:
+    - "robotics engineer"
+    - "autonomy engineer"
+    - "perception engineer"
+    - "motion planning engineer"
+  location: "United States"
+  posted_within_days: 7
+
+# Custom company career pages
+custom:
+  - name: Boston Dynamics
+    url: https://bostondynamics.wd1.myworkdayjobs.com/en-US/Boston_Dynamics
+    type: workday
+
+  - name: iRobot
+    url: https://irobot.wd5.myworkdayjobs.com/iRobot
+    type: workday
+
+  - name: Intuitive Surgical
+    url: https://careers.intuitive.com/en/jobs
+    type: custom
+    selectors:
+      job_card: ".job-card"
+      title: ".job-title"
+      location: ".job-location"
+      link: "a"
