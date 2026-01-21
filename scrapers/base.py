@@ -39,21 +39,52 @@ class Job:
 
     def is_entry_or_mid_level(self) -> bool:
         """
-        Check if job is entry/mid level (not requiring 8+ years).
-        Returns False for senior/principal/staff/director level roles.
+        Check if job is entry level (new grad / 0-2 years).
+        Returns False for roles requiring 3+ years experience.
+        For internships, only returns True if targeted at MS students.
         """
         title_lower = self.title.lower()
+        
+        # Check if it's an internship
+        is_internship = any(term in title_lower for term in ["intern", "internship", "co-op", "coop"])
+        
+        if is_internship:
+            # Only include MS/graduate-targeted internships
+            ms_patterns = ["ms", "m.s.", "master", "graduate", "grad student", "phd"]
+            return any(pattern in title_lower for pattern in ms_patterns)
+        
+        # Exclude senior/experienced roles (3+ years typically)
         senior_patterns = [
+            # Explicit senior titles
             "senior", "sr.", "sr ", "principal", "staff", "lead",
             "director", "head of", "vp ", "vice president",
             "manager", "architect", "distinguished", "fellow",
-            "iii", "iv", "v", "level 3", "level 4", "level 5",
-            "l3", "l4", "l5", "l6", "l7",
+            # Level indicators (typically 3+ years)
+            "ii", "iii", "iv", "v",  # Roman numerals (II = ~2-3 yrs, III+ = senior)
+            "level 2", "level 3", "level 4", "level 5",
+            "l2", "l3", "l4", "l5", "l6", "l7",
+            "2+", "3+", "4+", "5+",  # Years experience
+            "mid-level", "mid level", "experienced",
         ]
+        
         # Allow "team lead" type roles that might be ok
         if "team lead" in title_lower:
             return True
-        return not any(pattern in title_lower for pattern in senior_patterns)
+            
+        # Positive signals for entry level
+        entry_patterns = ["new grad", "entry", "junior", "associate", "i ", " i,", "level 1", "l1", "early career"]
+        is_explicitly_entry = any(pattern in title_lower for pattern in entry_patterns)
+        
+        # If explicitly entry level, include it
+        if is_explicitly_entry:
+            return True
+            
+        # If has senior patterns, exclude it
+        if any(pattern in title_lower for pattern in senior_patterns):
+            return False
+            
+        # Default: include if no senior patterns found (could be unlabeled entry level)
+        return True
 
 
 class BaseScraper(ABC):
