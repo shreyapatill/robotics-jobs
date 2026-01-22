@@ -31,34 +31,18 @@ keywords:
 # Greenhouse job boards (company slug from boards.greenhouse.io/{slug})
 greenhouse:
   - nuro
-  - cruise
-  - auroradriver
-  - zipline
-  - anduril
-  - skydio
   - neuralink
-  - tempus-ex
   - apptronik
-  - agilityx
   - formlabs
-  - relataboratories
 
 # Lever job boards (company slug from jobs.lever.co/{slug})
 lever:
   - zoox
-  - covariant
-  - symbotic
-  - outrider
-  - path-robotics
 
 # Workday job boards ({tenant}.wd{n}.myworkdayjobs.com)
 workday:
-  - tenant: nvidia
-    subdomain: nvidia.wd5.myworkdayjobs.com
   - tenant: apple
     subdomain: jobs.apple.com
-  - tenant: qualcomm
-    subdomain: qualcomm.wd5.myworkdayjobs.com
   - tenant: ultra
     subdomain: ultra.wd3.myworkdayjobs.com/en-US/UICCareers
 
@@ -81,37 +65,13 @@ ashby:
   - formant
   - viam
   - aescape
-
-# iCIMS job boards
-icims:
-  - name: Lockheed Martin
-    url: https://www.lockheedmartinjobs.com/search-jobs
-  - name: Honeywell
-    url: https://careers.honeywell.com/us/en/search-results
+  - ReflexRobotics
 
 # Custom company career pages
 custom:
   - name: Boston Dynamics
     url: https://bostondynamics.wd1.myworkdayjobs.com/en-US/Boston_Dynamics
     type: workday
-
-  - name: iRobot
-    url: https://irobot.wd5.myworkdayjobs.com/iRobot
-    type: workday
-
-  - name: Intuitive Surgical
-    url: https://careers.intuitive.com/en/jobs
-    type: custom
-    selectors:
-      job_card: ".job-card"
-      title: ".job-title"
-      location: ".job-location"
-      link: "a"
-
-  - name: EVONA
-    url: https://www.evona.com/jobs/
-    type: custom
-    note: "JavaScript-based Bullhorn board - may need browser scraping"
 
   - name: Fauna Robotics
     url: https://faunarobotics.com/careers/
@@ -129,6 +89,3 @@ custom:
     url: https://www.viam.com/careers
     type: custom
 
-  - name: Reflex Robotics
-    url: https://www.reflexrobotics.com/careers
-    type: custom
