@@ -17,23 +17,11 @@ class READMEGenerator:
 
     README_TEMPLATE = """# 🤖 Robotics & Autonomy Jobs
 
-A curated list of robotics and autonomy job openings, automatically updated daily.
-
-🔍 **Focused on**: Robotics, Autonomous Systems, Perception, Motion Planning, Controls, SLAM, and related fields.
-
-🌎 **Regions**: United States, Canada, Remote
+A curated list of entry-level robotics and autonomy job openings, automatically updated daily.
 
 ---
 
-## 📋 Table of Contents
-
-- [Jobs](#-jobs)
-- [Resources](#-resources)
-- [Contributing](#-contributing)
-
----
-
-## 💼 Jobs
+## 💼 All Jobs
 
 {jobs_table}
 
@@ -41,28 +29,11 @@ A curated list of robotics and autonomy job openings, automatically updated dail
 
 ---
 
-## 📚 Resources
+## 🗽 NYC Jobs
 
-### Interview Preparation
-- **[Interview Guide](https://interviewguide.dev/)** - Comprehensive technical interview prep
-- **[Neetcode.io](https://neetcode.io/)** - Coding interview practice
-- **[Robotics Interview Questions](https://github.com/nchauhan1311/robotics-interview-prep)** - Robotics-specific prep
+{nyc_jobs_table}
 
-### Robotics Learning
-- **[The Robotics Primer](https://robotics.cs.washington.edu/)** - Introduction to robotics concepts
-- **[Modern Robotics Course](http://hades.mech.northwestern.edu/index.php/Modern_Robotics)** - Free online course
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! To add a job:
-
-1. Add the company to `config/sources.yaml`
-2. Run the scraper: `python main.py`
-3. Submit a pull request
-
-Or manually add jobs by editing this README following the table format.
+[⬆️ Back to Top](#-robotics--autonomy-jobs)
 
 ---
 
@@ -221,6 +192,25 @@ Or manually add jobs by editing this README following the table format.
 
         return self.TABLE_HEADER + "\n".join(rows)
 
+    def is_canada_job(self, location: str) -> bool:
+        """Check if location is in Canada."""
+        location_lower = location.lower()
+        canada_indicators = [
+            "canada", "toronto", "vancouver", "montreal", "ottawa",
+            "calgary", "edmonton", "winnipeg", ", ca", "ontario",
+            "british columbia", "quebec", "alberta", ", on", ", bc", ", qc"
+        ]
+        return any(ind in location_lower for ind in canada_indicators)
+
+    def is_nyc_job(self, location: str) -> bool:
+        """Check if location is in NYC area."""
+        location_lower = location.lower()
+        nyc_indicators = [
+            "new york", "nyc", "brooklyn", "manhattan", "queens",
+            "bronx", "staten island", ", ny", "new york city"
+        ]
+        return any(ind in location_lower for ind in nyc_indicators)
+
     def generate(self, new_jobs: list[Job], update_status: bool = False) -> str:
         """
         Generate the README content.
@@ -236,6 +226,9 @@ Or manually add jobs by editing this README following the table format.
         merged = self.merge_jobs(existing, new_jobs)
         sorted_jobs = self.sort_jobs(merged)
 
+        # Filter out Canada jobs
+        sorted_jobs = [job for job in sorted_jobs if not self.is_canada_job(job.get("location", ""))]
+
         if update_status:
             from utils.job_checker import JobChecker
             checker = JobChecker()
@@ -246,10 +239,18 @@ Or manually add jobs by editing this README following the table format.
                 if url in statuses:
                     job["is_active"] = statuses[url]
 
+        # Split into NYC jobs and all jobs
+        nyc_jobs = [job for job in sorted_jobs if self.is_nyc_job(job.get("location", ""))]
+
         jobs_table = self.format_table(sorted_jobs)
+        nyc_jobs_table = self.format_table(nyc_jobs) if nyc_jobs else "No NYC jobs found yet."
         last_updated = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
 
-        return self.README_TEMPLATE.format(jobs_table=jobs_table, last_updated=last_updated)
+        return self.README_TEMPLATE.format(
+            jobs_table=jobs_table,
+            nyc_jobs_table=nyc_jobs_table,
+            last_updated=last_updated
+        )
 
     def save(self, content: str) -> None:
         """

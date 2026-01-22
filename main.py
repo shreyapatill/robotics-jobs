@@ -28,6 +28,8 @@ from scrapers import (
     LinkedInScraper,
     WorkdayScraper,
     CustomScraper,
+    AshbyScraper,
+    ICIMSScraper,
     BaseScraper,
     Job,
 )
@@ -67,6 +69,16 @@ def run_scrapers(config: dict) -> list[Job]:
                 all_jobs.extend(jobs)
                 progress.advance(task)
 
+        # Ashby scrapers
+        ashby_sources = config.get("ashby", [])
+        if ashby_sources:
+            task = progress.add_task("[cyan]Scraping Ashby...", total=len(ashby_sources))
+            scraper = AshbyScraper()
+            for source in ashby_sources:
+                jobs = scraper.scrape(source, keywords)
+                all_jobs.extend(jobs)
+                progress.advance(task)
+
         # Lever scrapers
         lever_sources = config.get("lever", [])
         if lever_sources:
@@ -95,6 +107,16 @@ def run_scrapers(config: dict) -> list[Job]:
             jobs = scraper.scrape(linkedin_config, keywords)
             all_jobs.extend(jobs)
             progress.advance(task)
+
+        # iCIMS scrapers
+        icims_sources = config.get("icims", [])
+        if icims_sources:
+            task = progress.add_task("[cyan]Scraping iCIMS...", total=len(icims_sources))
+            scraper = ICIMSScraper()
+            for source in icims_sources:
+                jobs = scraper.scrape(source, keywords)
+                all_jobs.extend(jobs)
+                progress.advance(task)
 
         # Custom scrapers
         custom_sources = config.get("custom", [])

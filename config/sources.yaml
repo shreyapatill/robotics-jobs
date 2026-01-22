@@ -8,19 +8,27 @@ keywords:
   - autonomous
   - autonomy
   - perception
+  - computer vision
+  - embedded
+  - controls
+  - robot learning
+  - navigation
+  - ROS
+  - ROS2
+  - Nav2
+  - robot operating system
+  - guidance
+  - unmanned
   - motion planning
   - path planning
   - SLAM
   - localization
-  - computer vision
-  - controls
   - mechatronics
-  - navigation
   - manipulation
   - firmware
-  - embedded
-  - ROS
   - sensor fusion
+  - lidar
+  - radar
 
 # Greenhouse job boards (company slug from boards.greenhouse.io/{slug})
 greenhouse:
@@ -53,6 +61,8 @@ workday:
     subdomain: jobs.apple.com
   - tenant: qualcomm
     subdomain: qualcomm.wd5.myworkdayjobs.com
+  - tenant: ultra
+    subdomain: ultra.wd3.myworkdayjobs.com/en-US/UICCareers
 
 # LinkedIn job search (keywords and filters)
 linkedin:
@@ -63,6 +73,23 @@ linkedin:
     - "motion planning engineer"
   location: "United States"
   posted_within_days: 7
+
+# Ashby job boards (company slug from jobs.ashbyhq.com/{slug})
+ashby:
+  - crusoe
+  - figureai
+  - sereact
+  - machina-labs
+  - formant
+  - viam
+  - aescape
+
+# iCIMS job boards
+icims:
+  - name: Lockheed Martin
+    url: https://www.lockheedmartinjobs.com/search-jobs
+  - name: Honeywell
+    url: https://careers.honeywell.com/us/en/search-results
 
 # Custom company career pages
 custom:
@@ -82,3 +109,28 @@ custom:
       title: ".job-title"
       location: ".job-location"
       link: "a"
+
+  - name: EVONA
+    url: https://www.evona.com/jobs/
+    type: custom
+    note: "JavaScript-based Bullhorn board - may need browser scraping"
+
+  - name: Fauna Robotics
+    url: https://faunarobotics.com/careers/
+    type: custom
+
+  - name: Icarus Robotics
+    url: https://app.dover.com/Icarus%20Robotics/careers/7835b967-f39a-4597-8b76-411f9d8deb83
+    type: custom
+
+  - name: Skyline Robotics
+    url: https://www.skylinerobotics.com/careers
+    type: custom
+
+  - name: Viam
+    url: https://www.viam.com/careers
+    type: custom
+
+  - name: Reflex Robotics
+    url: https://www.reflexrobotics.com/careers
+    type: custom

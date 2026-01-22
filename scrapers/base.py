@@ -67,7 +67,10 @@ class Job:
             "level 2", "level 3", "level 4", "level 5",
             "l2", "l3", "l4", "l5", "l6", "l7",
             "2+", "3+", "4+", "5+",  # Years experience
+            "4 years", "5 years", "6 years", "7 years",
             "mid-level", "mid level", "experienced",
+            # PhD requirements
+            "phd", "ph.d", "doctorate",
             # Transcript requirements (usually in job description, but sometimes in title)
             "transcript",
         ]
@@ -192,6 +195,15 @@ class BaseScraper(ABC):
             ("submit your transcript", "requires transcript"),
             ("provide transcript", "requires transcript"),
             ("upload transcript", "requires transcript"),
+            # High experience requirements
+            ("4+ years", "requires 4+ years"),
+            ("4 years of experience", "requires 4+ years"),
+            ("5+ years", "requires 5+ years"),
+            ("5 years of experience", "requires 5+ years"),
+            # PhD requirements
+            ("phd required", "requires PhD"),
+            ("ph.d. required", "requires PhD"),
+            ("doctorate required", "requires PhD"),
         ]
         
         try:

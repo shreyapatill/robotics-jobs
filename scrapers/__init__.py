@@ -6,6 +6,8 @@ from .lever import LeverScraper
 from .linkedin import LinkedInScraper
 from .workday import WorkdayScraper
 from .custom import CustomScraper
+from .ashby import AshbyScraper
+from .icims import ICIMSScraper
 
 __all__ = [
     "BaseScraper",
@@ -15,4 +17,6 @@ __all__ = [
     "LinkedInScraper",
     "WorkdayScraper",
     "CustomScraper",
+    "AshbyScraper",
+    "ICIMSScraper",
 ]
