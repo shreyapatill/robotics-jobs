@@ -53,26 +53,19 @@ class Job:
             ms_patterns = ["ms", "m.s.", "master", "graduate", "grad student", "phd"]
             return any(pattern in title_lower for pattern in ms_patterns)
         
-        # Exclude senior/experienced roles (3+ years typically)
+        # Exclude senior/experienced roles (4+ years typically)
         senior_patterns = [
             # Explicit senior titles
             "senior", "sr.", "sr ", "principal", "staff", "lead",
             "director", "head of", "vp ", "vice president",
-            "manager", "architect", "distinguished", "fellow",
-            # Management positions
-            "management", "supervisor", "coordinator", "program manager",
-            "project manager", "product manager", "engineering manager",
-            # Level indicators (typically 3+ years)
-            "ii", "iii", "iv", "v",  # Roman numerals (II = ~2-3 yrs, III+ = senior)
-            "level 2", "level 3", "level 4", "level 5",
-            "l2", "l3", "l4", "l5", "l6", "l7",
-            "2+", "3+", "4+", "5+",  # Years experience
+            "manager", "distinguished",
+            # Level indicators (typically 4+ years)
+            "iii", "iv", "v",  # Roman numerals (III+ = senior)
+            "level 3", "level 4", "level 5",
+            "l3", "l4", "l5", "l6", "l7",
+            "4+", "5+",  # Years experience
             "4 years", "5 years", "6 years", "7 years",
-            "mid-level", "mid level", "experienced",
-            # PhD requirements
-            "phd", "ph.d", "doctorate",
-            # Transcript requirements (usually in job description, but sometimes in title)
-            "transcript",
+            "experienced",
         ]
         
         # Allow "team lead" type roles that might be ok
@@ -188,22 +181,13 @@ class BaseScraper(ABC):
             - reason: Why it was filtered out (empty if passes)
         """
         disqualifying_patterns = [
-            # Transcript requirements only
-            ("transcript", "requires transcript"),
-            ("official transcript", "requires transcript"),
-            ("academic record", "requires transcript"),
-            ("submit your transcript", "requires transcript"),
-            ("provide transcript", "requires transcript"),
-            ("upload transcript", "requires transcript"),
             # High experience requirements
             ("4+ years", "requires 4+ years"),
             ("4 years of experience", "requires 4+ years"),
             ("5+ years", "requires 5+ years"),
             ("5 years of experience", "requires 5+ years"),
-            # PhD requirements
-            ("phd required", "requires PhD"),
-            ("ph.d. required", "requires PhD"),
-            ("doctorate required", "requires PhD"),
+            ("6+ years", "requires 6+ years"),
+            ("7+ years", "requires 7+ years"),
         ]
         
         try:

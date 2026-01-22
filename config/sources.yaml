@@ -10,7 +10,6 @@ keywords:
   - perception
   - computer vision
   - embedded
-  - controls
   - robot learning
   - navigation
   - ROS
@@ -23,12 +22,11 @@ keywords:
   - path planning
   - SLAM
   - localization
-  - mechatronics
   - manipulation
-  - firmware
   - sensor fusion
   - lidar
   - radar
+  - IMU
 
 # Greenhouse job boards (company slug from boards.greenhouse.io/{slug})
 greenhouse:
